@@ -1,0 +1,38 @@
+// Place all the styles related to the send_mails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.mail_inbox{
+  margin-top:4em;
+  li{
+    list-style-type:none;
+  }
+  li.mail_subject{
+    font-size:2em;
+    font-weight:bold;
+    border-bottom:1px solid black;
+  }
+  li.mail_to{
+    font-size:1em;
+    border-bottom:1px solid black;
+    padding-top:0.8em;
+  }
+  li.mail_body{
+    font-size:1em;
+    padding-top:0.8em;
+  }
+}
+
+.mail_index{
+  margin-top:4em;
+}
+
+.formtastic.send_mail{
+  width:200px;
+  margin: 2em auto;
+  padding: 0;
+  li{
+    list-style-type:none;
+  }
+}
+

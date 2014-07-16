@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  pool: 5
+  username: root
+  password: root
+  socket: /var/run/mysqld/mysqld.sock
+
+
+development:
+  <<: *default
+  database: pmg_mail_dev
+
+test:
+  <<: *default
+  database: pmg_mail_test
+
+production:
+  <<: *default
+  database: pmg_mail_prd

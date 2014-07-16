@@ -1,0 +1,22 @@
+<div class="col-md-10">
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>To</th>
+      <th>Subject</th>
+    </tr> 
+  </thead>
+  <tbody>
+    <% @send_mails.each do |send_mail| %>
+    <% if send_mail.status == false %>
+      <tr>
+        <td class="col-md-4"><%= link_to send_mail.to, edit_send_mail_path(send_mail) %></td>
+        <td><%= link_to send_mail.subject, edit_send_mail_path(send_mail) %></td>
+      </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>  
+</div>
+</div>
+

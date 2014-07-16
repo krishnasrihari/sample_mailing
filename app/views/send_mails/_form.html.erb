@@ -1,0 +1,24 @@
+<%= semantic_form_for @send_mail do |f| %>
+  <%= f.label 'To:'%>
+  <%= f.input :to, :label => false %>
+  <%= f.label 'Subject:'%>
+  <%= f.input :subject, :label => false %>
+  <%= f.label 'Body:'%>
+  <%= f.input :body,       :input_html => { :rows => 10, :cols => 20 }, :label => false%>
+  <%= f.inputs do %>
+	  <div>
+		  <%= f.semantic_fields_for :file_attachments do |ff|%>
+		    <%= render :partial => "add_file_attachment", :locals=>{:f => ff} %>
+		  <% end %>
+		  <tr id="add">
+		    <td colspan='3'>
+		      <%= link_to_add_association 'Attach Files', f, :file_attachments, :partial => "add_file_attachment" -%>
+		    </td>
+		  </tr>
+	  </div>
+  <% end %>
+  <br>
+  <%= f.submit 'Send' , :name => 'submit'%>
+  <%= f.submit 'Save As Draft' , :name => 'submit'%>
+  
+<% end %>

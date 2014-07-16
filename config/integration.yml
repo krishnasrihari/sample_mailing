@@ -1,0 +1,12 @@
+mail:
+  delivery_method: :smtp
+  smtp:
+    address: 'smtp.sendgrid.net'
+    port: 587
+    domain: 'example.com'
+    user_name: '******'
+    password: '******'
+    authentication: :plain
+  sendmail:
+    location: '/usr/sbin/sendmail'
+    arguments: '-i -t'
